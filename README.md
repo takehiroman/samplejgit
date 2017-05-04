@@ -32,6 +32,10 @@ COMMAND一覧
   - リポジトリ内のファイルの変更を，一覧表示する
   - git status
 
+* -diff
+  - myrepoフォルダ内のファイルの差分を表示する
+  - git diff
+
 * -clone REMOTE_REPOSITORY
   - リモーチリポジトリをcloneする
   - git clone REMOTE_REPOSITORY
