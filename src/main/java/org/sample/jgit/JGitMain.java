@@ -43,6 +43,9 @@ public class JGitMain
     @Option(name= "-clone",  usage= "print git clone")
     private boolean cloneFlag;
 
+    @Option(name= "-diff", usage= "print git diff")
+    private boolean diffFlag;
+
     public static void main(String[] args)throws IOException, GitAPIException {
         JGitMain jgit = new JGitMain();
 
@@ -72,6 +75,12 @@ public class JGitMain
                     .call();
 
         }
+        if(jgit.diffFlag){
+            git.diff()
+               .setOutputStream(System.out)
+               .call();
+        }
+
 
         if(jgit.commitFlag){
                 git.commit()
